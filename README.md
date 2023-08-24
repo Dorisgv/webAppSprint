@@ -1,2 +1,0 @@
-# webAppSprint
-Web messaging application.
