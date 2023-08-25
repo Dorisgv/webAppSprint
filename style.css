@@ -1,5 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0E0E0E;
+  /*font-family: variables.$font;*/
+  position: relative;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 340px;
+  height: 372px;
+  position: absolute;
+  top: 150px;
+  left: 60px;
+  z-index: -1;
+  border-radius: 14px;
+}
+
+@media (min-width: 1115px) {
+  img {
+    /*border: 2px solid rgb(255, 47, 186);*/
+    width: 600px;
+    margin-left: 280px;
+    margin-top: -10px;
+  }
+}
 h1 {
-  background-color: aqua;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  border: 3px solid red;
+  z-index: 2;
+  background-color: none;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 25px;
+  border-radius: 15px;
+  align-items: center;
+  gap: 25px;
+  margin-left: 305px;
+  margin-top: 165px;
+}
+
+@media (min-width: 1115px) {
+  .buttons {
+    /*border: 2px solid rgb(255, 47, 186);*/
+    width: 230px;
+    margin-left: 830px;
+    margin-top: 165px;
+  }
+  .buttons__style {
+    background-color: hsl(231, 88%, 56%);
+    width: 140%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    gap: 16px;
+  }
+  .buttons__style:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  /*.buttons__style{
+      border: 3px solid white;
+      background-color: hsl(231, 88%, 56%);
+      width: 140%;
+      height: 50px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      text-decoration: none;
+      gap: 16px;
+      &:hover{
+          cursor: pointer;
+          opacity: 0.5;
+      }
+      @media (min-width:1115px){
+          .buttons__style{
+              margin-left: auto;
+              margin-right: auto;
+          }
+      }
+  }*/
+}
+@media (min-width: 1115px) and (min-width: 375px) {
+  .buttons__style {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
