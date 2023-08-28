@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery.com</title>
-    <link rel="stylesheet" href="style.css"> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form login</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>-WhatsApp-</h1>
-    </header>
-    <div class="hero-container">
-    <!--<main class="main-container"> -->
-        <img src="images/Fondo_login.png" alt="">
-        <article class="buttons">
-            <a class="buttons__style" href="./pages/home_page.html">👽 ** Login</a>
-                  
-        </article>        
-    </div>
-        <!--</main> -->
+  <section class="form-login">
+      <h5>WELCOME</h5>
+    <input class="controls" type="number" name="usuario" value="" placeholder="User">
+    <input class="controls" type="password" name="contrasena" value="" placeholder="Password">
+    <input class="buttons" type="submit" value="Login" onclick="window.location.href='/pages/home_page.html';">
+    <p><a href="#">Forgot your password?</a></p>
+  </section>
 </body>
 </html>
