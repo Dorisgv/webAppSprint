@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "open sans" sans-serif;
 }
 
 body {
-  background-image: url("../images/Background.jpn.jpg");
   font-family: arial;
   position: relative;
 }
@@ -74,6 +74,77 @@ h5 {
 
 .form-login a:hover {
   text-decoration: underline;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#009688 0%, #009688 130px, #d9dbd5 130px, #d9dbd5 100%);
+}
+
+.container {
+  position: relative;
+  width: 1298px;
+  max-width: 100%;
+  height: calc(100vh - 40px);
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+  display: flex;
+}
+.container__lefSide {
+  position: relative;
+  flex: 30%;
+  background: #fff;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.container__rightSide {
+  position: relative;
+  flex: 70%;
+  background: #e5ddd5;
+}
+.container__rightSide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/FondoWhatsApp.png");
+  opacity: 0.06;
+}
+.container__header {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background: #ededed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+.container__user--cover {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+.container__nav--icons {
+  display: flex;
+}
+.container__nav--icons li {
+  display: flex;
+  list-style: none;
+  cursor: pointer;
+  color: #51585c;
+  font-size: 1.5em;
+  margin-left: 22px;
 }
 
 /*# sourceMappingURL=style.css.map */
