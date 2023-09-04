@@ -1,18 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form login</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <section class="form-login">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Sign Up</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="form-login">
       <h5>WELCOME</h5>
-    <input class="controls" type="number" name="usuario" value="" placeholder="User">
-    <input class="controls" type="password" name="contrasena" value="" placeholder="Password">
-    <input class="buttons" type="submit" value="Login" onclick="window.location.href='/pages/home_page.html'">
-    <p><a href="#">Forgot your password?</a></p>
-  </section>
-</body>
+      <input
+        class="controls"
+        type="text"
+        name="usuario"
+        required
+        value=""
+        placeholder="User"
+      />
+      <input
+        class="controls"
+        type="password"
+        name="contrasena"
+        required
+        value=""
+        placeholder="Password"
+      />
+      <input
+        class="buttons"
+        type="submit"
+        value="Login"
+        onclick="window.location.href='/pages/home_page.html'"
+      />
+      <p><a href="#">Forgot your password?</a></p>
+      <input
+        class="buttons1"
+        type="submit"
+        id="create"
+        value="Create your account"
+        onclick=""
+      />
+    </section>
+
+    <div id="signupModal" class="modal">
+      <section class="form-sign-up">
+        <span class="close-modal">&times;</span>
+        <h5>Sign Up</h5>
+        <input
+          class="controls"
+          type="text"
+          name="usuario"
+          required
+          value=""
+          placeholder="User"
+        />
+        <input
+          class="controls"
+          type="number"
+          name="num_cel"
+          required
+          value=""
+          placeholder="Number"
+        />
+        <input
+          class="controls"
+          type="password"
+          name="contrasena"
+          required
+          value=""
+          placeholder="Password"
+        />
+        <input
+          class="controls"
+          type="url"
+          name="url"
+          required
+          value=""
+          placeholder="Url"
+        />
+        <input
+          class="buttons"
+          type="submit"
+          value="Create an account"
+          onclick="window.location.href=''"
+        />   
+      </section>
+    </div>
+  </body>
 </html>
