@@ -1,0 +1,14 @@
+{"usuarios": [
+{
+    "id": 1,
+    "nombre": "Alejandro",
+    "telefono": "1234567890",
+    "imagen" : "./images/image 1.jpeg"
+},
+{
+    "id": 2,
+    "nombre": "Doris",
+    "telefono": "9876543210",
+    "imagen": "./images/image 2.jpeg"
+    }
+]}

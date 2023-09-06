@@ -1,6 +1,6 @@
 .form-login{
     width: 400px;
-    height: 340px;
+    height: 370px;
     background: #4e4d4d;
     margin: auto;
     margin-top: 100px;
@@ -9,6 +9,32 @@
     border-top: 4px solid #017bab;
     border-radius: 14px;
     color: white;
+}
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+ }
+ 
+ .close-modal:hover, .close-modal:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+ }
+.form-sign-up{
+    width: 400px;
+    height: 370px;
+    background: #4e4d4d;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 30px;
+    border-top: 4px solid #017bab;
+    border-radius: 14px;
+    color: white;
+    /* display: none; */  // como hago para enlazar este formulario al boton del primer formulario.
 }
 h5{
     margin: 0;
@@ -44,6 +70,19 @@ h5{
         opacity: 0.5;
     }
 }
+.buttons1{
+    width: 100%;
+    height: 30px;
+    background: #244b29;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    text-align: center;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.7;
+    }
+}
 .form-login p{
     height: 40px;
     text-align: center;
@@ -56,4 +95,27 @@ h5{
 }
 .form-login a:hover{
     text-decoration: underline;
+}
+//---------------------------------------------------------------------------------
+.form-account{
+    width: 400px;
+    height: 370px;
+    background: #4e4d4d;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 30px;
+    border-top: 4px solid #017bab;
+    border-radius: 14px;
+    color: white;
+}
+.form-account__input{
+    width: 100%;
+    border: 1px solid #017bab;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #252323;
+    font-size: 14px;
+    font-weight: bold;
 }
