@@ -19,5 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
    });
 });
 
+const Createyouraccount = document.querySelector('.buttons1');
+Createyouraccount.addEventListener('click', function(){
+   document.querySelector('.form-sign-up').style.display = 'block';
+   document.querySelector('.form-login').style.display = 'none';
+});
 
+const closemodal = document.querySelector('.close-modal');
+
+closemodal.addEventListener('click', function(){
+   document.querySelector('.form-sign-up').style.display = 'none';
+   document.querySelector('.form-login').style.display = 'block';
+});
 
