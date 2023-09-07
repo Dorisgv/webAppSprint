@@ -1,23 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById('signupModal');
-  const openBtn = document.getElementById('create');
-  const closeBtn = document.querySelector('.close-modal');
+import { getContact } from "./api.js";
 
-  openBtn.addEventListener('click', function(e) {
-     e.preventDefault();
-     modal.style.display = 'block';
-  });
-
-  closeBtn.addEventListener('click', function() {
-    modal.style.display = 'none';
- });
-
-  window.addEventListener('click', function(e) {
-     if (e.target == modal) {
-        modal.style.display = 'none';
-     }
-   });
-});
+const modal_contact = document.getElementById('modal_contact');
+const Btn__New = document.getElementById('Btn__New');
+async function contact() {
+    modal_contact.style.display = "block";
+    const contact = await getContact();
+    console.log(contact);
+    contact.forEach((product) =>  {
+        modal_contact.innerHTML +=`
+            <article class="contact-card">
+                    <img class="contact-image" src="${product.imagen}" alt="${product.nombre}" />
+                    <h2 class="contact-name">${product.nombre}</h2>
+            </article>
+            `;
+        
+    });
+}
 
 const Createyouraccount = document.querySelector('.buttons1');
 Createyouraccount.addEventListener('click', function(){
