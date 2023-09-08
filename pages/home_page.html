@@ -10,31 +10,71 @@
 
 <body>
   <main class="main-body">
+    
   <div class="container">
-    <div class="container__lefSide">
+    <section id="contact" class="contact-modal">
+      <div>
+        <button id="anterior"><ion-icon name="arrow-back"></ion-icon></button><span>Nuevo chat</span>
+      </div>
+      <div>
+        <input type="text" placeholder="Busca un nombre">
+      </div>
+      <div id="contactos-whtapp">
+        <h2>CONTACTOS EN WHATSAPP</h2>
+        <article class="contact-card" id="perfil-card">
+          
+        </article>
+      </div>
+    </section>
+    <div class="container__lefSide" id="container-chat">
+      
       <div class="container__header">
         <div class="container__user">
           <img src="/images/image 1.jpeg" alt="usuario1" class="container__user--cover">
         </div>
+        
         <ul class="container__nav--icons">
-          <li><ion-icon name="scan-circle-outline"></ion-icon></li>
-          <li><ion-icon name="chatbox"></ion-icon></li>
+          <li><ion-icon name="people"></ion-icon><li>
+            <li><ion-icon name="chatbubble"></ion-icon></li>
+          <li><ion-icon name="radio-button-on"></ion-icon></li>
+          <li><ion-icon name="chatbox" id="chatContact"></ion-icon></li>
           <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
         </ul>
       </div>
-
-      <div class="container__search--chat">
-        <input type="text" placeholder="search for a chat or start a new one">
-        <ion-icon name="search_outline"></ion-icon>
+      <!--Search chat-->
+      <div class="search_chat">
+        <div>
+          <input type="text" placeholder="Busca un chat o inicia uno nuevo">
+          <ion-icon name="search-outline"></ion-icon>
+        </div>
       </div>
-      <button class="container__Btn--New" id="Btn__New">New
-        <aside class="modal_contact" id="modal_contact">
-          <h3>Contact</h3>
-          <div id="cartItemList" class="content"></div>
-        </aside>
-      </button>
+
     </div>
-    <div class="container__rightSide"></div>
+    <div class="container__rightSide">
+      <img src="/images/Fondo Wapp.png" alt="FondoWhapp" id="imagen-fondo" class="container__rightSide__imagen-fondo">
+      <div class="container__rightSide__Mensajes" id="container__Mensajes">
+        <div class="header__mensaje">
+          <img src="/images/image 4.jpeg" alt=""> 
+          <span>Lorena</span>
+        </div>
+
+        <div class="mensajes-recibidos">
+          <div class="mensajes-recibidos-left">
+            mensajes left
+          </div>
+          <div class="mensajes-recibido-right">
+            mensajes right
+          </div>
+        </div>
+
+        <div class="enviar-mensajes">
+          <input type="text">
+          <button>Enviar</button>
+          <img src="/images/contento.png" alt="contento" id="emoticon">
+        </div>
+
+      </div>
+    </div>
   </div>
 
   

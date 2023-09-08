@@ -1,21 +1,48 @@
 import { getContact } from "./api.js";
 
-const modal_contact = document.getElementById('modal_contact');
-const Btn__New = document.getElementById('Btn__New');
+const modal_contact = document.getElementById('contact');
+const chatContact = document.getElementById('chatContact');//Es el evento de traer los contactos
+const contactosWhtapp = document.getElementById('contactos-whtapp');
+const containerChat = document.getElementById('container-chat');
+const anterior = document.getElementById('anterior');//Boton regresar
+const containerMensajes = document.getElementById('container__Mensajes');
+const imagenFondo = document.getElementById('imagen-fondo');
+const perfilCard = document.getElementById('perfil-card');
+
 async function contact() {
-    modal_contact.style.display = "block";
+    containerChat.style.display = 'none'; //No se muestre
+    modal_contact.style.display = "block"; //Si se muestre
     const contact = await getContact();
     console.log(contact);
     contact.forEach((product) =>  {
-        modal_contact.innerHTML +=`
-            <article class="contact-card">
-                    <img class="contact-image" src="${product.imagen}" alt="${product.nombre}" />
-                    <h2 class="contact-name">${product.nombre}</h2>
-            </article>
+        perfilCard.innerHTML +=`
+        <div class="contact-card__perfil" id="contact-card" name="${product.id}">
+                <div class="contact-card__perfil__image" >
+                <img src="${product.imagen}" alt="${product.nombre}" />
+                </div>
+                <span class="contact-card__perfil__name">${product.nombre}</span>
+        </div>
             `;
-        
     });
-}
+    const contactCard = document.getElementsByClassName('contact-card__perfil');
+    
+        Array.from(contactCard).forEach((element) => {
+            let id = element.getAttribute('name');
+            element.addEventListener('click', () => {
+            imagenFondo.style.display = "none";
+        containerMensajes.style.display = "block";
+        console.log(id);
+    });
+});
+}    
+        
+
+anterior.addEventListener('click', () => {
+    containerChat.style.display = 'block'; //
+    modal_contact.style.display = "none"; //
+});
+
+chatContact.addEventListener('click', contact);
 
 const Createyouraccount = document.querySelector('.buttons1');
 Createyouraccount.addEventListener('click', function(){
