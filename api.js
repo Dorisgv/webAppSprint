@@ -1,4 +1,4 @@
-const URL = 'http://localhost:3000'; //Trayendo la URL del JSON. Enlace general del JSON
+const URL = 'http://localhost:3000'; //Trayendo la URL del JSON. Enlace general del JSON//Lugo hay que sustituirla en el raywail
 
 
 export const getContact = async () => {
