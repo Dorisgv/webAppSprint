@@ -9,15 +9,6 @@ const containerMensajes = document.getElementById('container__Mensajes');
 const imagenFondo = document.getElementById('imagen-fondo');
 const perfilCard = document.getElementById('perfil-card');
 
-const modal_contact = document.getElementById('contact');
-const chatContact = document.getElementById('chatContact');//Es el evento de traer los contactos
-const contactosWhtapp = document.getElementById('contactos-whtapp');
-const containerChat = document.getElementById('container-chat');
-const anterior = document.getElementById('anterior');//Boton regresar
-const containerMensajes = document.getElementById('container__Mensajes');
-const imagenFondo = document.getElementById('imagen-fondo');
-const perfilCard = document.getElementById('perfil-card');
-
 async function contact() {
     containerChat.style.display = 'none'; //No se muestre
     modal_contact.style.display = "block"; //Si se muestre
