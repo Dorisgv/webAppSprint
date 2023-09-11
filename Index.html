@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <section class="form-login">
+    <form id="formLogin" class="form-login">
       <h5>WELCOME</h5>
-      <input
+      <input  id="inputPhone"
         class="controls"
-        type="text"
+        type="number"
         name="usuario"
         required
         value=""
-        placeholder="User"
+        placeholder="Phone Number"
       />
-      <input
+      <input id="inputPassword"
         class="controls"
         type="password"
         name="contrasena"
@@ -26,12 +26,11 @@
         value=""
         placeholder="Password"
       />
-      <input id="buttons"
+      <button id="buttons"
         class="buttons"
         type="submit"
-        value="Login"
-        onclick="window.location.href='/pages/home_page.html'"
-      />
+        >Login</button>
+
       <p><a href="#">Forgot your password?</a></p>
       <input id="create"
         class="buttons1"
@@ -40,10 +39,10 @@
         value="Create your account"
         onclick="window.location.href=''"
       />
-    </section>
+    </form>
 
     <div id="signupModal" class="modal">
-      <section class="form-sign-up">
+      <form class="form-sign-up">
         <span class="close-modal">&times;</span>
         <h5>Sign Up</h5>
         <input
@@ -87,10 +86,11 @@
           value="Create an account"
           onclick="window.location.href=''"
         />
-      </section>
+      </form>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./SweetAlert/validacionCampos.js" ></script>
+    <script type="module" src="./SweetAlert/validacionCampos.js" ></script>
   </body>
 </html>

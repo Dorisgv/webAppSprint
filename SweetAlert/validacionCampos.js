@@ -1,25 +1,25 @@
-/*var buttons = document.getElementById("buttons");
+import { getContact } from "../api.js";
 
-buttons.addEventListener("click",function(){
-    Swal.fire({
-        title: 'Sweet!',
-        text: 'Modal with a custom image.',
-        imageUrl: 'https://unsplash.it/400/200',
-        imageWidth: 400,
-        imageHeight: 200,
-        imageAlt: 'Custom image',
-      })
-});*/
 
-const usuario = document.querySelector('#input');
-const contrasena = document.querySelector('#input');
-const buttons = document.querySelector('buttons');
+const buttons = document.getElementById('formLogin');
 
-buttons.addEventListener("click",()=>{
-    if(usuario.ariaValueMax.length == 0){
-        alert('Por favor llena los campos');
+buttons.addEventListener("submit", async(e)=>{
+    e.preventDefault();
+    const user = await getContact();
+    console.log(user);
+    const inputPhone = document.getElementById('inputPhone').value;
+    const inputPassword = document.getElementById('inputPassword').value;
+    let searchUser = user.find(e => e.telefono === inputPhone && e.contraseña === inputPassword);
+    console.log(searchUser);
+    if(inputPhone === "" && inputPassword === ""){
+        Swal.fire('Por favor llena los campos');
+    }else if(searchUser){
+        sessionStorage.setItem('searchUser', JSON.stringify(searchUser));
+        Swal.fire(`Hola, ${searchUser.nombre}`);
+        window.location.href='/pages/home_page.html';
     }else{
-        alert('Hola'+ usuario.value);
+        Swal.fire('usuario no encontrado');
+        /*alert('Telefono/contraseña invalidas, vuelve a intentarlo.');*/
     }
 });
 
