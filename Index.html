@@ -8,60 +8,18 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <form id="formLogin" class="form-login">
-      <h5>WELCOME</h5>
-      <input  id="inputPhone"
-        class="controls"
-        type="number"
-        name="usuario"
-        required
-        value=""
-        placeholder="Phone Number"
-      />
-      <input id="inputPassword"
-        class="controls"
-        type="password"
-        name="contrasena"
-        required
-        value=""
-        placeholder="Password"
-      />
-      <button id="buttons"
-        class="buttons"
-        type="submit"
-        >Login</button>
-
-      <p><a href="#">Forgot your password?</a></p>
-      <input id="create"
-        class="buttons1"
-        type="submit"
-        id="create"
-        value="Create your account"
-        onclick="window.location.href=''"
-      />
-    </form>
-
-    <div id="signupModal" class="modal">
-      <form class="form-sign-up">
-        <span class="close-modal">&times;</span>
-        <h5>Sign Up</h5>
-        <input
+    <div class="form-login">
+      <form id="formLogin">
+        <h5>WELCOME</h5>
+        <input  id="inputPhone"
           class="controls"
-          type="text"
+          type="number"
           name="usuario"
           required
           value=""
-          placeholder="User"
+          placeholder="Phone Number"
         />
-        <input
-          class="controls"
-          type="number"
-          name="num_cel"
-          required
-          value=""
-          placeholder="Number"
-        />
-        <input
+        <input id="inputPassword"
           class="controls"
           type="password"
           name="contrasena"
@@ -69,7 +27,47 @@
           value=""
           placeholder="Password"
         />
-        <input
+        <button id="buttons"
+          class="buttons"
+          type="submit"
+          >Login</button>
+  
+        <p><a href="#">Forgot your password?</a></p>
+
+      </form>
+      <button id="create"
+        class="buttons1">Create your account</button>
+    </div>
+    
+    <div id="signupModal" class="modal">
+      <form id="formRegister" class="form-sign-up">
+        <span class="close-modal">&times;</span>
+        <h5>Sign Up</h5>
+        <input id="inputName"
+          class="controls"
+          type="text"
+          name="usuario"
+          required
+          value=""
+          placeholder="User"
+        />
+        <input id="inputCelular"
+          class="controls"
+          type="number"
+          name="num_cel"
+          required
+          value=""
+          placeholder="Number"
+        />
+        <input id="inputCont"
+          class="controls"
+          type="password"
+          name="contrasena"
+          required
+          value=""
+          placeholder="Password"
+        />
+        <input id="inputUrl"
           class="controls"
           type="url"
           name="url"
@@ -77,15 +75,9 @@
           value=""
           placeholder="Url"
         />
-        <input
+        <button
           class="buttons"
-          type="submit"
-          value="Create"
-          onclick=""
-        />
-          value="Create an account"
-          onclick="window.location.href=''"
-        />
+          type="submit">Create</button>  
       </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
