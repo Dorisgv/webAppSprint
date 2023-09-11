@@ -8,7 +8,6 @@ const anterior = document.getElementById('anterior');//Boton regresar
 const containerMensajes = document.getElementById('container__Mensajes');
 const imagenFondo = document.getElementById('imagen-fondo');
 const perfilCard = document.getElementById('perfil-card');
-const infoUser = document.getElementById('infoUser');
 
 async function contact() {
     containerChat.style.display = 'none'; //No se muestre
