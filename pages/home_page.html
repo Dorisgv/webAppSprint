@@ -50,14 +50,29 @@
       </div>
 
     </div>
+
     <div class="container__rightSide">
       <img src="/images/Fondo Wapp.png" alt="FondoWhapp" id="imagen-fondo" class="container__rightSide__imagen-fondo">
+      
       <div class="container__rightSide__Mensajes" id="container__Mensajes">
-        <div class="header__mensaje">
-          <img src="/images/image 4.jpeg" alt=""> 
-          <span>Lorena</span>
-        </div>
+        
+        <div class="header__mensaje" >
+          <div id="infoUser"></div>
+          <div>
+            <ion-icon name="search-outline"></ion-icon>
+            <ion-icon name="ellipsis-vertical"></ion-icon>
+          </div>
+        </div> <!--Perfil del usuario que se le dio click-->
+        
 
+        <!-- <div class="header">
+          <ul class="nav-icons">
+            <li><ion-icon name="search-outline"></ion-icon></li>
+            <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+          </ul>
+        </div> -->
+        
+        
         <div class="mensajes-recibidos">
           <div class="mensajes-recibidos-left">
             mensajes left
@@ -68,9 +83,11 @@
         </div>
 
         <div class="enviar-mensajes">
-          <input type="text">
-          <button>Enviar</button>
-          <img src="/images/contento.png" alt="contento" id="emoticon">
+          <ion-icon name="happy-outline"></ion-icon>
+          <ion-icon name="add-outline"></ion-icon>
+          <input type="text" placeholder="Escribe un mensaje">
+          <ion-icon name="mic"></ion-icon>
+          <!-- <img src="/images/contento.png" alt="contento" id="emoticon"> -->
         </div>
 
       </div>

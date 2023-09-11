@@ -233,14 +233,14 @@ h5 {
 }
 .contact-card__perfil {
   display: flex;
-  background-color: red;
+  background-color: rgb(252, 252, 252);
   margin-top: 20px;
 }
 .contact-card__perfil__image {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: red;
+  background-color: rgb(240, 240, 240);
   margin-right: 5px;
 }
 .contact-card__perfil__image img {
@@ -262,10 +262,11 @@ h5 {
 }
 
 .header__mensaje {
-  background-color: #51585c;
+  background-color: #043450;
   padding: 10px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  display: flex;
 }
 .header__mensaje img {
   object-fit: cover;
@@ -278,29 +279,40 @@ h5 {
 }
 
 .mensajes-recibidos {
-  background-color: red;
+  background-color: rgb(194, 88, 88);
   height: 470px;
 }
 
 .enviar-mensajes {
-  background-color: blue;
-  height: 55px;
+  position: relative;
   width: 100%;
-  outline: none;
-  border: none;
-  background: #fff;
-  padding: 6px;
-  height: 38px;
-  border-radius: 30px;
-  font-size: 14px;
-  padding-left: 40px;
-  margin-top: 23px;
+  height: 63px;
+  background: #f0f0f0;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#emoticon {
-  max-width: 25px;
-  height: auto;
-  float: left;
+.enviar-mensajes ion-icon {
+  cursor: pointer;
+  font-size: 1.8em;
+  color: #51585c;
+}
+
+.enviar-mensajes ion-icon:nth-child(1) {
+  margin-right: 15px;
+}
+
+.enviar-mensajes input {
+  position: relative;
+  width: 90%;
+  margin: 0 20px;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1em;
 }
 
 .search_chat {
