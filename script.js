@@ -8,6 +8,24 @@ const anterior = document.getElementById("anterior"); //Boton regresar
 const containerMensajes = document.getElementById("container__Mensajes");
 const imagenFondo = document.getElementById("imagen-fondo");
 const perfilCard = document.getElementById("perfil-card");
+const containerUser = document.getElementById("containerUser");
+const infoSesion = sessionStorage.getItem('searchUser');
+const today = new Date();
+
+let day = today.getDate();
+ 
+// `getMonth()` devuelve el mes (de 0 a 11)
+let month = today.getMonth() + 1;
+ 
+// `getFullYear()` devuelve el año completo
+let year = today.getFullYear();
+ 
+// muestra la fecha de hoy en formato `MM/DD/YYYY`
+console.log(`${month}/${day}/${year}`);
+let now = today.toLocaleTimeString('en-US');
+
+console.log(now);
+
 
 async function contact() {
   containerChat.style.display = "none"; //No se muestre
@@ -36,32 +54,19 @@ async function contact() {
       let infoContac = contact.find((item) => item.id == idUser);
       // console.log(infoContac);
       renderChat(infoContac);
+      enviarMensaje(infoContac);
     });
   });
 }
 
 anterior.addEventListener("click", () => {
-  containerChat.style.display = "block"; //
-  modal_contact.style.display = "none"; //
+    containerChat.style.display = "block"; //
+    modal_contact.style.display = "none"; //
+    imagenFondo.style.display = "block"; 
+    containerMensajes.style.display = "none";
 });
 
 chatContact.addEventListener("click", contact);
-
-/* const formLogin = document.getElementById("formLogin");
-const signupModal = document.getElementById("signupModal");
-const Createyouraccount = document.getElementById("create");
-
-Createyouraccount.addEventListener("click", function () {
-  formLogin.style.display = "none";
-  signupModal.style.display = "block";
-});
-
-const closemodal = document.querySelector(".close-modal");
-
-closemodal.addEventListener("click", function () {
-  document.getElementById(".form-sign-up").style.display = "none";
-  document.getElementById(".form-login").style.display = "block";
-}); */
 
 async function renderChat(infoContac) {
   console.log(infoContac.nombre);
@@ -71,30 +76,44 @@ async function renderChat(infoContac) {
 `;
 }
 
-function enviarMensaje() {
-  const addProducto = async (e) => {
+
+async function enviarMensaje(e, infoContac) {
     e.preventDefault();
+    const perfil = JSON.parse(infoSesion)
+    const mensaje = document.getElementById('mensajeChat');
     const updatedData = {
-      idUser1: nombreProducto.value, //capturar inicio de sesion
-      idUser2: precioProducto.value, //Iniciar conversacion
+      idUser1: perfil.id, //capturar inicio de sesion// INicia la conversacion
+      idUser2: infoContac.id, //Iniciar conversacion// a quien le llega la conversacion
       mensaje: [
         {
           //Array de conversaciones
-          sendBy: imagen0.value,
-          fecha: imagen1.value,
-          hora: imagen2.value,
-          texto: imagen3.value,
+          sendBy: perfil.id, //Quien envió el mensaje
+          fecha: `${month}/${day}/${year}`,
+          hora: `${now}`,
+          texto: mensaje.value
         },
       ],
     };
 
     try {
-      const response = await axios.post(`${URL}/productos`, updatedData);
-      alert("Producto agreado:", response.data);
+      const response = await axios.post('http://localhost:3000/Conversaciones', updatedData);
+      alert("Mensaje enviado:", response.data);
       console.log(response);
     } catch (error) {
       console.log(error);
     }
-    listProducts(currentCollection);
   };
+
+  const enviar = document.getElementById('enviar');
+  enviar.addEventListener('submit',  enviarMensaje)
+  
+
+
+function perfilLogin(params) { //Inició sesión
+    const perfil = JSON.parse(infoSesion)
+    containerUser.innerHTML += `
+        <img src="${perfil.imagen}" alt="usuario1" class="container__user--cover">
+    `
 }
+
+perfilLogin();
