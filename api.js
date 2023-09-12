@@ -13,3 +13,16 @@ export const getContact = async () => {
         return [];
     }
 }
+
+export const getConversaciones = async () => {
+    try {
+
+        let { data } = await axios(`${URL}/conversaciones`);
+        console.log(data)
+        return data;
+        
+    } catch (error) {
+        console.log(error);
+        return [];
+    }
+}

@@ -158,6 +158,9 @@
 .mensajes-recibidos{
     background-color: rgb(194, 88, 88);
     height: 470px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .enviar-mensajes{
@@ -240,5 +243,17 @@
     left: 10px;
     top: -27px;
     font-size: 1.2em;
+}
+.enviados{
+    background-color: green;
+    width: 170px;
+    height: 50px;
+    margin-top: 20px;
+}
+.recibidos{
+    background-color: blue;
+    width: 170px;
+    height: 50px;
+    margin-top: 20px;
 }
 
