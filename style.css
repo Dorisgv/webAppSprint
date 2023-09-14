@@ -262,7 +262,7 @@ h5 {
 }
 
 .header__mensaje {
-  background-color: #cf0c0c;
+  background-color: #0c81cf;
   padding: 10px;
   justify-content: space-between;
   align-items: center;
@@ -279,7 +279,7 @@ h5 {
 }
 
 .mensajes-recibidos {
-  background-color: rgb(194, 88, 88);
+  background-color: rgb(115, 198, 221);
   height: 470px;
   padding: 20px;
   display: flex;
@@ -358,14 +358,16 @@ h5 {
 }
 
 .enviados {
-  background-color: green;
+  background-color: rgb(225, 157, 117);
+  border-radius: 10px;
   width: 170px;
   height: 50px;
   margin-top: 20px;
 }
 
 .recibidos {
-  background-color: blue;
+  background-color: rgb(122, 122, 193);
+  border-radius: 10px;
   width: 170px;
   height: 50px;
   margin-top: 20px;
